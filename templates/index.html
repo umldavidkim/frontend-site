@@ -1,0 +1,138 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  </head>
+
+
+  <body>
+
+
+    <div class="container">
+
+      <header>
+        <img class="logo" src="{% static 'images/logo.svg' %}" alt="26andfour logo">
+
+        <nav>
+          <a class="hide-desktop" href="#">
+            <img class="menu" id="menu" src="{% static 'images/ham.svg' %}" alt="toggle menu">
+          </a>
+
+          <ul class="show-desktop hide-mobile" id="nav">
+            <li class="exit-btn hide-desktop" id="exit"><img src="{% static 'images/exit.svg' %}" alt="exit menu"></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <section>
+        <img class="server" src="{% static 'images/server.svg' %}" alt="server graphic">
+
+        <h1>Web Hosting for the Modern Era</h1>
+        <p class="subhead">Go serverless and pay only for what you use.</p>
+
+        <img id='dk' class="scroll hide-mobile show-desktop" src="{% static 'images/scroll.svg' %}" alt="scroll down">
+      </section>
+
+    </div>
+
+
+
+    <!-- new div created because it will extend beyong the side bounds of the container above -->
+    <!-- the container above is reused in the nested div since we want the content to be aligned -->
+    <div class="blue-container">
+      <div class="container">
+
+        <ul>
+          <li>
+            <img src="{% static 'images/icon-1.svg' %}" alt="Calendar icon">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec ligula tincidunt, fermentum quam eu, vulputate dui.</p>
+          </li>
+          <li>
+            <img src="{% static 'images/icon-2.svg' %}" alt="Calendar icon">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec ligula tincidunt, fermentum quam eu, vulputate dui.</p>
+          </li>
+          <li>
+            <img src="{% static 'images/icon-3.svg' %}" alt="Calendar icon">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec ligula tincidunt, fermentum quam eu, vulputate dui.</p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+
+    <div class="gray-container">
+      <div class="container">
+
+        <ul>
+          <li>
+            <figure>
+              <img src="{% static 'images/user1.png'%}" alt="User testimonial picture">
+              <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec ligula tincidunt, fermentum quam eu, vulputate dui.</blockquote>
+              <figcaption>- Jane Doe</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="{% static 'images/user2.png'%}" alt="User testimonial picture">
+              <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec ligula tincidunt, fermentum quam eu, vulputate dui.</blockquote>
+              <figcaption>- John Doe</figcaption>
+            </figure>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+
+    <!-- only need to use div container, since nothing extends beyond the sides -->
+    <div class="container">
+      <h2>Start your free trial now!</h2>
+      <a class="cta" href="#">Get Started</a>
+    </div>
+
+
+    <footer>
+      <div class="footer-container">
+        <div class="container">
+          <a href="#"><img class="logo" src="{% static 'images/logo-white.svg' %}" alt="logo"></a>
+          <p class="address">Melrose Place, 90210<br>USA</p>
+          <ul class="footer-links">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      var menu = document.getElementById('menu');
+      var nav = document.getElementById('nav');
+      var exit = document.getElementById('exit');
+
+      menu.addEventListener('click', function(e) {
+        nav.classList.toggle('hide-mobile');
+        e.preventDefault();
+      });
+
+      exit.addEventListener('click', function(e) {
+        nav.classList.toggle('hide-mobile');
+        e.preventDefault();
+      });
+
+    </script>
+
+  </body>
+
+
+</html>
